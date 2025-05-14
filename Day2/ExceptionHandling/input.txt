@@ -1,0 +1,6 @@
+Java is fun
+Streams are powerful
+Hello123
+Invalid_line_with_@
+Another good line
+Oops#bad
