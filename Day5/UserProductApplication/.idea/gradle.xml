@@ -4,10 +4,10 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/ProductApplication" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/UserProductApplication" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/ProductApplication" />
+            <option value="$PROJECT_DIR$/UserProductApplication" />
           </set>
         </option>
       </GradleProjectSettings>
