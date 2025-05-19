@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a23f002-3d85-4c05-9049-b4b581cfef25" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/8.13/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/modules/ProductApplication.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/ProductApplication/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/DTO/AddressDto$AddressDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/DTO/AddressDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/DTO/ProductDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/DTO/UserDto$UserDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/DTO/UserDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Entity/Address$AddressBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Entity/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Entity/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Entity/User$UserBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Exception/InvalidProductException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Exception/ProductNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Exception/UserNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Mapper/AddressMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Mapper/ProductMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/ProductApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Service/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Service/Impl/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/classes/java/main/com/example/ProductApplication/Service/Impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/reports/problems/problems-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/tmp/compileJava/compileTransaction/stash-dir/ProductServiceImpl.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/tmp/compileJava/compileTransaction/stash-dir/UserServiceImpl.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/DTO/AddressDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/DTO/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/DTO/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Entity/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Exception/InvalidProductException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Exception/ProductNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Exception/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Mapper/AddressMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Mapper/ProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/ProductApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Service/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Service/Impl/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/main/java/com/example/ProductApplication/Service/Impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductApplication/src/test/java/com/example/ProductApplication/ProductApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/UserProductApplication">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UserProductApplication" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zabhishek23-nucleusteq&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zabhishek23-nucleusteq/Java-Learning.git&quot;,
+    &quot;accountId&quot;: &quot;a5de36b2-3d66-4b91-ab20-22fd8d05b34e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2x4wlapUYveYl0LXCTMak5XHxC7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.UserProductApplication [:com.example.UserProductApplication.UserProductApplication.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "day-5",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/Desktop/Java Learning/Day5/UserProductApplication",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="UserProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.UserProductApplication.UserProductApplication" />
+      <module name="UserProductApplication.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.UserProductApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UserProductApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a23f002-3d85-4c05-9049-b4b581cfef25" name="Changes" comment="" />
+      <created>1747210805616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747210805616</updated>
+    </task>
+    <servers />
+  </component>
+</project>
