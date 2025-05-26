@@ -5,93 +5,127 @@ import com.example.EmployeeApplication.Entity.Employee;
 import com.example.EmployeeApplication.Exception.ResourceNotFoundException;
 import com.example.EmployeeApplication.Repository.EmployeeRepository;
 import com.example.EmployeeApplication.Service.Impl.EmployeeServiceImpl;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
-
-import java.lang.reflect.Array;
 import java.util.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
-
 @ExtendWith(MockitoExtension.class)
 public class EmployeeServiceImplTest {
 
-    @InjectMocks
+    @Mock
     private EmployeeRepository employeeRepository;
+
     @Mock
     private ModelMapper modelMapper;
-    @Mock
+
+    @InjectMocks
     private EmployeeServiceImpl employeeService;
 
-    @Test
-    void testAddEmployee()
-    {
-        EmployeeDto dto =  new EmployeeDto("Abhishek","abhishek@gmail.com","IT",2000F);
-        Employee emp = new Employee(1,"Abhishek","abhishek@gmail.com","IT",2000F);
-        when(modelMapper.map(dto,Employee.class)).thenReturn(emp);
-        when(employeeRepository.save(emp)).thenReturn(emp);
-        when(modelMapper.map(emp,EmployeeDto.class)).thenReturn(dto);
-        EmployeeDto result = employeeService.addEmployee(dto);
-        assertEquals("Abhishek",result.getName());
-        verify(employeeRepository,times(1)).save(emp);
+    // Constants
+    private static final int EMPLOYEE_ID = 1;
+    private static final String EMPLOYEE_NAME = "Abhishek";
+    private static final String EMPLOYEE_EMAIL = "abhishek@gmail.com";
+    private static final String EMPLOYEE_DEPARTMENT = "IT";
+    private static final Float EMPLOYEE_SALARY = 2000F;
+
+    private static final int EMPLOYEE_ID_2 = 2;
+    private static final String EMPLOYEE_NAME_2 = "John";
+    private static final String EMPLOYEE_EMAIL_2 = "john@example.com";
+    private static final String EMPLOYEE_DEPARTMENT_2 = "HR";
+    private static final Float EMPLOYEE_SALARY_2 = 3000F;
+
+    private EmployeeDto inputDto;
+    private Employee employeeEntity;
+    private EmployeeDto expectedDto;
+
+    @BeforeEach
+    void setUp() {
+        inputDto = new EmployeeDto(EMPLOYEE_NAME, EMPLOYEE_EMAIL, EMPLOYEE_DEPARTMENT, EMPLOYEE_SALARY);
+        employeeEntity = new Employee(EMPLOYEE_ID, EMPLOYEE_NAME, EMPLOYEE_EMAIL, EMPLOYEE_DEPARTMENT, EMPLOYEE_SALARY);
+        expectedDto = new EmployeeDto(EMPLOYEE_NAME, EMPLOYEE_EMAIL, EMPLOYEE_DEPARTMENT, EMPLOYEE_SALARY);
     }
 
+    @Test
+    @DisplayName("Should successfully add employee when valid data provided")
+    void shouldAddEmployee_WhenValidDataProvided() {
+        when(modelMapper.map(inputDto, Employee.class)).thenReturn(employeeEntity);
+        when(employeeRepository.save(employeeEntity)).thenReturn(employeeEntity);
+        when(modelMapper.map(employeeEntity, EmployeeDto.class)).thenReturn(expectedDto);
+
+        EmployeeDto result = employeeService.addEmployee(inputDto);
+
+        assertThat(result).usingRecursiveComparison().isEqualTo(expectedDto);
+
+        verify(modelMapper).map(inputDto, Employee.class);
+        verify(employeeRepository).save(employeeEntity);
+        verify(modelMapper).map(employeeEntity, EmployeeDto.class);
+        verifyNoMoreInteractions(employeeRepository, modelMapper);
+    }
 
     @Test
-    void testGetAllEmployees() {
-        Employee emp = new Employee(1, "Abhishek", "abhishek@gmail.com", "IT", 2000F);
-        EmployeeDto dto = new EmployeeDto("Abhishek", "abhishek@gmail.com", "IT", 2000F);
+    @DisplayName("Should return all employees when employees exist")
+    void shouldReturnAllEmployees_WhenEmployeesExist() {
+        List<Employee> employees = Arrays.asList(
+                employeeEntity,
+                new Employee(EMPLOYEE_ID_2, EMPLOYEE_NAME_2, EMPLOYEE_EMAIL_2, EMPLOYEE_DEPARTMENT_2, EMPLOYEE_SALARY_2)
+        );
+        EmployeeDto dto1 = expectedDto;
+        EmployeeDto dto2 = new EmployeeDto(EMPLOYEE_NAME_2, EMPLOYEE_EMAIL_2, EMPLOYEE_DEPARTMENT_2, EMPLOYEE_SALARY_2);
 
-        when(employeeRepository.findAll()).thenReturn(Arrays.asList(emp));
-        when(modelMapper.map(emp, EmployeeDto.class)).thenReturn(dto);
+        when(employeeRepository.findAll()).thenReturn(employees);
+        when(modelMapper.map(employees.get(0), EmployeeDto.class)).thenReturn(dto1);
+        when(modelMapper.map(employees.get(1), EmployeeDto.class)).thenReturn(dto2);
 
         List<EmployeeDto> result = employeeService.getAllEmployees();
 
-        assertEquals(1, result.size());
-        assertEquals("Abhishek", result.get(0).getName());
-        verify(employeeRepository, times(1)).findAll();
-    }
-    @Test
-    void testDeleteEmployee()
-    {
-        Employee emp = new Employee(1, "Aditya", "aditya@mail.com", "Tech", 75000f);
-
-        when(employeeRepository.findById(1)).thenReturn(Optional.of(emp));
-
-        String result = employeeService.deleteEmployee(1);
-
-        assertEquals("Employee with ID 1 deleted successfully.", result);
-        verify(employeeRepository, times(1)).delete(emp);
+        assertThat(result).containsExactly(dto1, dto2);
+        verify(employeeRepository).findAll();
+        verify(modelMapper).map(employees.get(0), EmployeeDto.class);
+        verify(modelMapper).map(employees.get(1), EmployeeDto.class);
+        verifyNoMoreInteractions(employeeRepository, modelMapper);
     }
 
     @Test
-    public void testUpdateEmployee_whenValidId_thenReturnsUpdatedDto() {
-        int id = 1;
-        Employee existing = new Employee(id, "Aditya", "aditya@example.com", "HR", 50000f);
-        EmployeeDto updateDto = new EmployeeDto("Aakash", "aakash@example.com", "Finance", 60000f);
-        Employee updated = new Employee(id, "Aakash", "aakash@example.com", "Finance", 60000f);
+    @DisplayName("Should return empty list when no employees exist")
+    void shouldReturnEmptyList_WhenNoEmployeesExist() {
+        when(employeeRepository.findAll()).thenReturn(Collections.emptyList());
 
-        when(employeeRepository.findById(id)).thenReturn(Optional.of(existing));
-        when(employeeRepository.save(existing)).thenReturn(updated);
+        List<EmployeeDto> result = employeeService.getAllEmployees();
 
-        EmployeeDto result = employeeService.updateEmployee(id, updateDto);
-
-        assertEquals("Aakash", result.getName());
-        assertEquals("aakash@example.com", result.getEmail());
-        assertEquals("Finance", result.getDepartment());
+        assertThat(result).isEmpty();
+        verify(employeeRepository).findAll();
+        verifyNoMoreInteractions(employeeRepository, modelMapper);
     }
 
     @Test
-    public void testUpdateEmployee_whenInvalidId_thenThrowsException() {
-        int id = 2;
-        EmployeeDto updateDto = new EmployeeDto("Test", "test@example.com", "IT", 55000f);
+    @DisplayName("Should delete employee successfully when valid ID provided")
+    void shouldDeleteEmployee_WhenValidIdProvided() {
+        when(employeeRepository.findById(EMPLOYEE_ID)).thenReturn(Optional.of(employeeEntity));
 
-        when(employeeRepository.findById(id)).thenReturn(Optional.empty());
+        String result = employeeService.deleteEmployee(EMPLOYEE_ID);
 
-        assertThrows(ResourceNotFoundException.class, () -> employeeService.updateEmployee(id, updateDto));
+        assertThat(result).isEqualTo("Employee with ID " + EMPLOYEE_ID + " deleted successfully.");
+        verify(employeeRepository).findById(EMPLOYEE_ID);
+        verify(employeeRepository).delete(employeeEntity);
+        verifyNoMoreInteractions(employeeRepository, modelMapper);
+    }
+
+    @Test
+    @DisplayName("Should throw ResourceNotFoundException when employee not found for deletion")
+    void shouldThrowException_WhenEmployeeNotFoundForDeletion() {
+        when(employeeRepository.findById(EMPLOYEE_ID)).thenReturn(Optional.empty());
+
+        assertThrows(ResourceNotFoundException.class,
+                () -> employeeService.deleteEmployee(EMPLOYEE_ID));
+
+        verify(employeeRepository).findById(EMPLOYEE_ID);
+        verify(employeeRepository, never()).delete(any());
+        verifyNoMoreInteractions(employeeRepository, modelMapper);
     }
 }
